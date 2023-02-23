@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\TourPlanner\TourPlanner\TourPlanner.csproj" />
+    <ProjectReference Include="..\TourPlanner.Presentation\TourPlanner.Presentation.csproj" />
   </ItemGroup>
 
 </Project>
