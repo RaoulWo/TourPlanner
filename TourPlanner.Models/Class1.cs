@@ -1,8 +1,7 @@
 using System;
 
-namespace TourPlanner.Models
+namespace TourPlanner.Models;
+
+public class Class1
 {
-    public class Class1
-    {
-    }
 }

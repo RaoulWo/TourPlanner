@@ -1,8 +1,7 @@
 using System;
 
-namespace TourPlanner.BusinessLogic
+namespace TourPlanner.BusinessLogic;
+
+public class Class1
 {
-    public class Class1
-    {
-    }
 }

@@ -1,8 +1,7 @@
 using System;
 
-namespace TourPlanner.DataAccess
+namespace TourPlanner.DataAccess;
+
+public class Class1
 {
-    public class Class1
-    {
-    }
 }
