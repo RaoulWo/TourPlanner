@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace TourPlanner.Presentation;
 
@@ -11,7 +12,11 @@ public partial class App : Application
     public App()
     {
         AppHost = Host.CreateDefaultBuilder()
-            .ConfigureServices((context, services) =>
+            .ConfigureLogging(builder =>
+            {
+                builder.AddLog4Net("../../../log4net.config");
+            })
+            .ConfigureServices(services =>
             {
                 services.AddSingleton<MainWindow>();
             })
