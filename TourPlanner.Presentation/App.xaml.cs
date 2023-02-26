@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using TourPlanner.DataAccess;
 using TourPlanner.DataAccess.Context;
 
 namespace TourPlanner.Presentation;
@@ -34,9 +35,10 @@ public partial class App : Application
             })
             .ConfigureServices(services =>
             {
+                services.AddSingleton<MainWindow>();
                 services.AddDbContext<TourContext>(options => 
                     options.UseNpgsql(Configuration.GetConnectionString("postgres")));
-                services.AddSingleton<MainWindow>();
+                services.AddTransient<IUnitOfWork, UnitOfWork>();
             })
             .Build();
     }
